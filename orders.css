@@ -1,0 +1,36 @@
+.order-container {
+  background: lightgreen;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.orderlist-container {
+  flex: 6;
+  background: rgb(216, 198, 32);
+  display: flex;
+  flex-direction: column;
+}
+
+.ordering-area-container {
+  background: red;
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-price-quantity {
+  flex: 1;
+  background: rgb(226, 209, 209);
+}
+.order-list {
+  flex: 3;
+  background: rgb(228, 126, 126);
+}
+.payment-container {
+  display: flex;
+  background-color: brown;
+  flex: 1;
+}
+.date-container {
+  flex: 1;
+}

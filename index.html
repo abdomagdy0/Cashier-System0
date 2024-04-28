@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="style.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+
+    <link href="category.css" rel="stylesheet" />
+    <link href="orders.css" rel="stylesheet" />
+    <link href="search.css" rel="stylesheet" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -12,17 +17,64 @@
       <div class="header-container"></div>
       <div class="content-container">
         <div class="order-container">
-          <div class="orderlist-container"></div>
-          <div class="date-container"></div>
+          <div class="orderlist-container">
+            <fieldset class="legend-container">
+              <legend>الطلبات / الحساب</legend>
+              <div class="order-list"></div>
+            </fieldset>
+
+            <div class="payment-container"></div>
+          </div>
+          <div class="date-container">
+            <fieldset class="legend-container">
+              <legend>التاريخ</legend>
+            </fieldset>
+          </div>
         </div>
 
         <div class="search-container">
-          <div class="searchbar-container"></div>
+          <div class="searchbar-container">
+            <fieldset class="legend-container">
+              <legend>قائمة البحث</legend>
+            </fieldset>
+          </div>
         </div>
 
         <div class="category-container">
-          <div class="itemlist-container"></div>
-          <div class="quantity-container"></div>
+          <div class="itemlist-container">
+            <fieldset class="legend-container">
+              <legend>قائمة المأكولات و المشروبات</legend>
+              <div class="category-buttons">
+                <button class="category-button button-green">المأكولات</button>
+                <button class="category-button button-red">المشروبات</button>
+              </div>
+              <div class="foods-drinks-container">
+                <div class="price-container">
+                  <p>السعر</p>
+                  <div class="price-list">
+                    <ul>
+                      <li>Link 1</li>
+                      <li>Link 1</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="food-container">
+                  <p>الصنف</p>
+                  <div class="foodlist-items">
+                    <ul>
+                      <li>Link 1</li>
+                      <li>Link 2</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="quantity-container">
+            <fieldset class="legend-container">
+              <legend>الكميه</legend>
+            </fieldset>
+          </div>
         </div>
       </div>
     </div>
