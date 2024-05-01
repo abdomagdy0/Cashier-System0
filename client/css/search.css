@@ -1,0 +1,32 @@
+.search-container {
+  display: flex;
+  flex: 1;
+  margin: 0 20px;
+  flex-direction: column;
+}
+.search-area-container {
+  display: flex;
+  flex: 0.25;
+  direction: rtl;
+}
+.searchbar-container {
+  flex: 1;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.searchbar-container form {
+  flex: 1;
+}
+.searchbar-container .search-submit {
+  height: 30px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.searchbar-container .search-input {
+  align-items: center;
+  height: 30px;
+  width: 300px;
+  margin-right: 100px;
+}

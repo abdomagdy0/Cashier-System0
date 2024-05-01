@@ -85,5 +85,49 @@
 }
 
 .payment-buttons-container {
+  display: flex;
   flex: 1.4;
+  flex-direction: column;
+}
+.payment-buttons-container button {
+  border: none;
+  font-weight: bold;
+  border: 3px solid rgb(209, 204, 204);
+  text-decoration: none;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+}
+.delete-cancel-container {
+  display: flex;
+  justify-content: space-between;
+}
+.delete-cancel-container button {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 70px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.payment-button-yellow {
+  background: yellow;
+}
+.payment-button-violet {
+  background: #5f0c92;
+}
+.payment-button-violet:hover {
+  background-color: purple;
+}
+
+.payment-button-yellow:hover {
+  background-color: #dac50c;
+}
+.payment-button-lightred {
+  background: rgba(192, 39, 39, 0.836);
+  padding: 20px 50px;
+}
+.payment-button-lightred:hover {
+  background: rgba(197, 7, 7, 0.836);
 }

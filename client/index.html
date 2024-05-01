@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="css/date.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/category.css" rel="stylesheet" />
+    <link href="css/orders.css" rel="stylesheet" />
+    <link href="css/search.css" rel="stylesheet" />
+    <link href="css/calculator.css" rel="stylesheet" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ماكينه الكاشير</title>
+  </head>
+
+  <body>
+    <div class="layout-container">
+      <div class="header-container"><h1>ماكينه الكاشير</h1></div>
+      <div class="content-container">
+        <div class="order-container">
+          <div class="order-details-container">
+            <fieldset class="order-legend-container">
+              <legend>الطلبات / الحساب</legend>
+              <div class="order-item-price-quantity">
+                <div class="order-price">
+                  <p>السعر</p>
+                  <div class="order-price-list">
+                    <ul></ul>
+                  </div>
+                </div>
+
+                <div class="order-quantity">
+                  <p>الكمية</p>
+                  <div class="order-quantity-list">
+                    <ul></ul>
+                  </div>
+                </div>
+
+                <div class="order-item">
+                  <p>الصنف</p>
+                  <div class="order-item-list">
+                    <ul id="order-item-name-list"></ul>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-buttons-container">
+                <div class="delete-cancel-container">
+                  <button class="payment-button-yellow" onclick="clearOrders()">
+                    الغاء الطلب
+                  </button>
+                  <button
+                    onclick="deleteProductFromOrders()"
+                    class="payment-button-violet"
+                  >
+                    حذف صنف
+                  </button>
+                </div>
+                <button onclick="createOrder()" class="payment-button-lightred">
+                  سداد
+                </button>
+              </div>
+            </fieldset>
+          </div>
+          <div class="date-container">
+            <fieldset class="legend-container">
+              <legend>التاريخ</legend>
+              <div class="date-container">
+                <div id="date-boxes">
+                  <div class="yearbox">
+                    <h1>السنه</h1>
+                    <h2 id="year"></h2>
+                  </div>
+                  <div class="monthbox">
+                    <h1>الشهر</h1>
+                    <h2 id="month"></h2>
+                  </div>
+
+                  <div class="daybox">
+                    <h1>اليوم</h1>
+                    <h2 id="day"></h2>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="search-container">
+          <div class="search-area-container">
+            <fieldset class="legend-container">
+              <legend>قائمة البحث</legend>
+              <div class="searchbar-container">
+                <form action="search.php">
+                  <input
+                    class="search-input"
+                    type="search"
+                    placeholder="  ادخل الكود"
+                  />
+                  <input
+                    type="submit"
+                    onclick="search_item()"
+                    class="search-submit"
+                    value="بحث"
+                  />
+                </form>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="category-container">
+          <div class="itemlist-container">
+            <fieldset class="category-legend-container">
+              <legend>قائمة المأكولات و المشروبات</legend>
+              <div class="category-buttons">
+                <button
+                  id="food"
+                  onclick="displayList('foods')"
+                  class="category-button button-green"
+                >
+                  المأكولات
+                </button>
+                <button
+                  class="category-button button-red"
+                  onclick="displayList('drinks')"
+                >
+                  المشروبات
+                </button>
+              </div>
+              <div class="foods-drinks-container">
+                <div class="price-container">
+                  <p>السعر</p>
+                  <div class="categ-item-list">
+                    <ul id="buying-item-list"></ul>
+                  </div>
+                </div>
+                <div class="food-container">
+                  <p>الصنف</p>
+                  <div class="foodlist-items">
+                    <ul id="buying-price-list"></ul>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="quantity-container">
+            <fieldset class="legend-container">
+              <legend>الكميه</legend>
+              <div class="display-buttons-container">
+                <div class="display-box-container">
+                  <h2 id="quantity-box"></h2>
+
+                  <button
+                    onclick="addProductToOrders()"
+                    id="quantity-add-button"
+                    name="quant-button"
+                  >
+                    اضف منتج
+                  </button>
+                </div>
+
+                <div class="quantity-buttons-container">
+                  <input
+                    onclick="updateQuantity('5')"
+                    type="submit"
+                    value="5"
+                    id="number5"
+                  />
+                  <input
+                    onclick="updateQuantity('6')"
+                    type="submit"
+                    value="6"
+                    id="number6"
+                  />
+                  <input
+                    onclick="updateQuantity('7')"
+                    type="submit"
+                    value="7"
+                    id="number7"
+                  />
+                  <input
+                    onclick="updateQuantity('2')"
+                    type="submit"
+                    value="2"
+                    id="number2"
+                  />
+                  <input
+                    onclick="updateQuantity('3')"
+                    type="submit"
+                    value="3"
+                    id="number3"
+                  />
+                  <input
+                    onclick="updateQuantity('4')"
+                    type="submit"
+                    value="4"
+                    id="number4"
+                  />
+                  <input
+                    onclick="updateQuantity('0')"
+                    type="submit"
+                    value="0"
+                    id="number0"
+                  />
+                  <input
+                    onclick="updateQuantity('1')"
+                    type="submit"
+                    value="1"
+                    id="number1"
+                  />
+                  <input
+                    onclick="updateQuantity('.')"
+                    type="submit"
+                    value="."
+                    id="decimal_key"
+                  />
+                  <input
+                    onclick="deleteQuantity()"
+                    type="submit"
+                    value="مسح"
+                    id="delete-key"
+                  />
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/add_to_orders.js"></script>
+    <script src="js/time.js"></script>
+  </body>
+</html>

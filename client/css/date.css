@@ -1,0 +1,15 @@
+.date-container {
+  display: flex;
+}
+#date-boxes {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+#date-boxes h2 {
+  text-align: center;
+  padding: 30px;
+  border: 2px solid black;
+  margin: 5px;
+}

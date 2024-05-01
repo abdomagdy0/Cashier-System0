@@ -33,10 +33,21 @@
 .price-container p {
   align-self: center;
 }
-.price-list {
+.categ-item-list {
   display: flex;
   flex: 1;
   border: 0.5px solid black;
+}
+
+#quantity-add-button {
+  flex: 1;
+  font-weight: bold;
+  border: 3px solid rgb(209, 204, 204);
+  padding: 5px 80px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
 .quantity-container {
@@ -46,11 +57,10 @@
 .category-button {
   border: none;
   font-weight: bold;
-  border: 2px solid rgb(236, 227, 227);
-  padding: 5px 70px;
+  border: 3px solid rgb(209, 204, 204);
+  padding: 5px 80px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 5px;
   cursor: pointer;
